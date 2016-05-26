@@ -190,9 +190,7 @@
               </div>
               <div id="pw-rec" class="box">
                 <p>Password Recommendation:</p>
-                <ul>
-                  <li>For first time users, we recommend you enter your myidshield.com password below.</li>
-                </ul>
+                <p>For first time users, we recommend you enter your myidshield.com password below.</p>
               </div>
             </div>
 
@@ -270,30 +268,17 @@
     </script>
     <script type="text/ng-template" id="views/error.html">
       <div class="view error-view">
-        <div class="row">
+        <div class="box row">
           <div class="col-sm-12">
-          <p>&nbsp;</p>
-          <h2 class="text-center">Sorry! There was a problem.</h2>
-          <hr>
+            <h2 class="text-center">Sorry! There was a problem.</h2>
+            <hr />
             <div class="alert alert-warning">
-              <p>
-                Please use your browser's back button to return to the previous page, then try again.
-              </p>
+              <p>Your set password request has expired.  Please make another request or contact support for help.</p>
             </div>
-
-            <p class="alert">
-              If this problem persists, please provide this error information to your support team:
-            </p>
-
-            <div class="well text-center">
-              <div class="" ng-repeat="e in errors">
-                <strong>{{e}}</strong>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
+
     </script>
     <script type="text/ng-template" id="views/password-error-messages.html">
       <small class="help-block" ng-show="errors.minLength" wd-minLength>Password is too short</small>
@@ -308,7 +293,7 @@
     <![endif]-->
 
     <div class="logo-container">
-      <img ng-show="logoUrl" class="logo img-responsive" ng-src="{{logoUrl}}"/>
+      <img class="logo img-responsive" src="https://www.idshield.com/sites/all/themes/idshield/logo.png" />
     </div>
     <div class="container" ng-controller="ErrorCtrl" ng-cloak>
       <div ng-show="inError" ng-include="'views/error.html'"></div>
